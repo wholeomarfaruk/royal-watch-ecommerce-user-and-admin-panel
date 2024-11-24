@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+}
+
+.box {
+    background-color: rgb(205, 209, 212);
+    border-radius: 10PX;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 490px;
+}
+
+.btnreg {
+    background-color: #a31733;
+    color: white;
+    font-weight: 700;
+}
+
+.btnreg:hover {
+    background-color: #812739;
+    color: white;
+}
+
+.btnlog {
+    color: #a31733;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px;
+    margin-bottom: 10px;
+}
+
+.btnlog:hover {
+    color: blue;
+}
+
+/* CONTACT US */
+
+.child {
+    background-image: url('../images/contact-bg.jpg');
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top top;
+}
+
+.con-text {
+    font-size: 50px;
+    color: white;
+    padding-top: 80px;
+}
+
+.contact {
+    position: relative;
+    width: 60%;
+    max-width: 600px;
+    position: relative;
+    background: repeating-conic-gradient(from var(--a), #a31733 0%, #a31733 10%, transparent 10%, transparent 50%);
+    animation: animate 6s linear infinite;
+    padding: 3px;
+    background-color: #fff;
+    box-shadow: 0 0 13px rgb(196, 190, 190);
+    border-radius: 7px;
+    margin: 0 auto;
+}
+
+
+.contact-details {
+    margin-top: -50px;
+}
+
+.contact-details .box-item {
+    width: 300px;
+    background-color: rgb(255, 242, 242);
+    border-radius: 10px;
+    border: 1px solid #a31733;
+    padding: 8px;
+}
+
+.contact-details .box-item .icon {
+    font-size: 2.5rem;
+    color: #a31733;
+}
+
+
+
+
+.contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #a31733 0%, #a31733 10%, transparent 10%, transparent 50%);
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+}
+
+@property --a {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes animate {
+    0% {
+        --a: 0deg;
+    }
+
+    100% {
+        --a: 360deg;
+    }
+}
+
+.contact form {
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    border: 20px solid transparent;
+}
+
+.contact form .inputbox input,
+.contact form .inputbox textarea {
+    width: 100% !important;
+    padding: 5px 0;
+    font-size: 1.1em;
+    margin: 10px 0;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #a31733;
+    outline: none;
+    resize: none;
+}
+
+
+
+
+.contact-form-area .contact form .inputbox [type="submit"] {
+    width: 100%;
+    background-color: #a31733;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.contact-form-area .contact form .inputbox [type="submit"]:hover {
+    background-color: #661223;
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-details-area {
+        padding: 0 15px;
+
+    }
+
+    .contact-details {
+        margin-top: 20px !important;
+        gap: 15px !important;
+        flex-direction: column !important;
+        justify-content: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-details .box-item {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    /* For mobile phones: */
+    [class="contact"] {
+        width: 100%;
+    }
+}

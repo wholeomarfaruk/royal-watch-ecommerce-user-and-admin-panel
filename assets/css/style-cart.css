@@ -1,0 +1,115 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+  background: #edf2f5;
+}
+.shop-table{
+  color: #666;
+}
+.product-thumbnail{
+    width: 6rem;
+}
+.product-name a{
+    color:#666;
+
+}
+
+.new-price{
+    color:#a41733;
+}
+.old-price{
+    color: #aaa;
+}
+
+/* product-quantity-box */
+.quantity {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* box-shadow: 0 0 15px rgb(228, 227, 227); */
+    border-radius: 15px;
+    width: 185px;
+    border: 1px solid rgb(207, 204, 204);
+  }
+.quantity-button, .quantity-input {
+    outline: none;
+    border: none;
+    padding: 16px;
+    font-size: 18px;
+  }
+  
+.quantity-input{
+    width: 55%;
+    text-align: center;
+
+  }
+  
+.quantity-button {
+    cursor: pointer;
+  }
+.quantity-button:nth-last-child(1) {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+.quantity-button:nth-child(1) {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  
+.quantity-button:hover {
+    background-color: #e6e6e6;
+  }
+.quantity-button:nth-last-child(1):active {
+    box-shadow: inset -4px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+.quantity-button:nth-child(1):active {
+    box-shadow: inset 4px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+
+.btn-shopping{
+  padding: 10px 30px;
+}
+.btn-shopping:hover{
+  background: #2e2d2d;
+}
+.btn-run{
+  color: #fff;
+  background: #a41733;
+  padding: 10px 30px;
+}
+.btn-run:hover{
+     background: #d12d4e;
+     color:#fff;
+}
+@media screen and (max-width: 499px){
+ 
+     .blind{
+      display: none;
+     }
+     .quantity {
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      border-radius: 15px;
+      width: 140px;
+      height: 50px;
+      border: 1px solid rgb(207, 204, 204);
+    }
+  .quantity-button, .quantity-input {
+      outline: none;
+      border: none;
+      padding: 10px 16px;
+      font-size: 18px;
+    }
+    
+  .quantity-input{
+      width: 40%;
+      height: 20%;
+      text-align: center;
+  
+    }
+}

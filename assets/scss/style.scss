@@ -1,0 +1,623 @@
+@font-face { font-family: 'Siyam Rupali';
+  src: url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/SiyamRupali/SiyamRupali.eot?version=1.070');
+  src: local('Siyam Rupali'),     url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/SiyamRupali/SiyamRupali.woff?version=1.070') format('woff'),        url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/SiyamRupali/SiyamRupali.ttf?version=1.070') format('truetype');
+  font-style: normal;}
+
+@import "partials/variables";
+@import "partials/mixins";
+// ============Common CSS Start=================
+* {
+    margin: 0;
+    padding: 0;
+}
+p, h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0;
+}
+dl,ol,ul,li{
+list-style: none;
+margin-bottom: 0;
+padding-left: 0;
+}
+a{
+  text-decoration: none;
+  color: $primary-color;
+}
+a:hover{
+  color: $hover-color;
+}
+
+.title{
+ @include title-text(); 
+}
+
+.wrapper{
+    max-width: 1240px;
+    margin: 0 auto;
+    @include breakpoint(max-md){
+      padding: 0 15px;
+    }
+}
+// ============Common CSS End=================
+
+
+
+.desktop-menu ul.navbar-nav{
+  li.nav-item{
+    a.nav-link{
+      font-family: $primary-font;
+      font-weight: 500;
+      color: #fff;
+      font-size: rem(18px);
+      padding: 18px 13px;
+      &:hover{
+        color: #fff;
+        background-color: $hover-color;
+      }
+      &.active{
+        color: #fff;
+        background-color: $hover-color;
+      }
+    }
+  }
+  .dropdown{
+    &:hover  .dropdown-menu{
+      display: block;
+      
+    }
+    .dropdown-menu{
+      transition: all 0.3s ease;
+    }
+  }
+}
+#header {
+  .top-header{}
+  .middle-header{
+    height: rem(90px);
+    background-color: #f1f1f1;
+
+    .row{
+      justify-content: center;
+      align-items: center;
+      .mh-l{
+        flex: 0 0 auto;
+        width: 20%;
+        a.navbar-brand{
+          img{
+            width: rem(200px);
+            height: rem(65px);
+          }
+        }
+      }
+      .mh-m{
+        flex: 0 0 auto;
+        width: 45%;
+
+        .container-fluid{
+          input[type=search]{
+            
+            &:focus-visible{
+              box-shadow: none;
+              border: 1px solid $hover-color;
+            }
+            
+          }
+          button[type=submit]{
+            border: 1px solid $hover-color;
+            color: $hover-color;
+            &:hover{
+              background-color: $hover-color;
+              color: #fff;
+            }
+          }
+        }
+      }
+      .mh-r{
+  
+        flex: 0 0 auto;
+        width: 35%;
+
+        div.d-flex{
+          justify-content: center;
+          align-items: center;
+          gap: rem(10px);
+        }
+
+        ul{
+  
+          li.list-item{
+            display: inline-block;
+        
+            a.link{
+              display: inline-block;
+              color: $primary-color;
+              &:hover{
+                color: $hover-color;
+              }
+            }
+          }
+        }
+        ul.user_auth{
+          li.list-item{
+          margin-left: rem(10px);
+          a.link{
+            & i{
+              font-size: rem(25px);
+            }
+            & p {
+              @include sub-text($size:small);
+              
+            }
+          }
+          }
+        }
+        ul.calltoaction{
+        border-right: rem(1px) solid $lighter-color;
+        padding: 8px;
+          li.list-item{
+            a.link{
+              div.d-flex{
+                justify-content: center;
+                align-items: end;
+                gap: rem(8px);
+
+              }
+              & i{
+                font-size: rem(30px);
+              }
+              .text{
+                .phone-text{
+                  @include sub-text($size:small);
+                  font-size: small;
+                  margin-bottom: rem(-4px);
+                }
+                .phone-number{
+                  font-weight: 700;
+                  letter-spacing: rem(1px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .end-header{
+
+  }
+}
+
+//====================== Footer Start ===========================
+#footer{
+  background-color: #062a47;
+  .top-footer{
+    padding-top: rem(32px);
+    padding-bottom: rem(32px);
+
+
+    .flex-box{
+      display: flex;
+      justify-content: space-between;
+      gap: rem(16px);
+      @include breakpoint(max-md){
+        flex-wrap: wrap;
+       
+        flex-direction: column;
+      }
+      .col{
+
+        
+       
+        &-one{
+          flex: 0 0 auto;
+          width: 40%;
+          @include breakpoint(max-md){
+            width: 100%;
+          }
+          .brand-logo{
+            img{
+              width: rem(200px);
+              height: rem(65px);
+            }
+          }
+          .brand-text{
+            padding-top: 10px;
+            padding-left: 8px;
+            width: 90%;
+            p{
+              @include sub-text();
+              color: $lighter-color;
+              
+            }
+          }
+  
+        }
+        &-two{
+         
+          
+  
+        }
+        &-three{
+         
+  
+        }
+        &-four{
+          
+  
+        }
+        &-two,
+        &-three,
+        &-four{
+
+          flex: 0 0 auto;
+          width: 16%;
+          .title{
+            @include title-text($size:rem(20px));
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 600;
+            padding-bottom: 10px;
+          }
+          nav.footer-nav{
+            ul{
+              li.list-item{
+                a.link{
+                  color: $lighter-color;
+                  &:hover{
+                    color: $hover-color;
+                  }
+                }
+              }
+            }
+          }
+          @include breakpoint(max-md){
+            width: 100%;
+          }
+        }
+      }
+      
+    }
+  }
+  .end-footer{
+    padding-top: rem(32px);
+    padding-bottom: rem(32px);
+    border-top: 1px solid $lighter-color;
+
+    .flex-box{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include breakpoint(max-md){
+        flex-direction: column;
+        gap: rem(16px);
+      }
+      .col{
+        &-one{
+          .copyright{
+            color: $lighter-color;
+          }
+        }
+        &-two{
+          & span{
+            margin-right: 10px;
+            color: $lighter-color;
+          }
+        }
+        &-one,
+        &-two{
+          flex: 0 0 auto;
+          
+        }
+      }
+    }
+  }
+} 
+//====================== Footer END =========================== 
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: $hover-color;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: $hover-color;
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+.hero-section{
+margin:  30px 0;
+
+  & >.flex-box{
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @include breakpoint(max-md){
+      flex-direction: column;
+    }
+
+    .col{
+      &-one{
+        flex: 0 0 auto;
+        width: calc(75% - 20px);
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px #d3d3d3;
+        height: 500px;
+        @include breakpoint(max-md){
+          width: 100%;
+        }
+        .carousel-area{
+          height: 100%;
+        }
+      }
+      &-two{
+        
+        flex: 0 0 auto;
+        width: 25%;
+        @include breakpoint(max-md){
+          width: 100%;
+        }
+        .flex-box{
+          height: 500px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          @include breakpoint(max-md){
+            flex-direction: row;
+            height: 300px;
+          }
+        }
+       
+         
+        
+        .featured-img{
+         
+          height: 48%;
+          padding: 8px;
+          border-radius: 8px;
+          box-shadow: 0 0 5px #d3d3d3;
+          @include breakpoint(max-md){
+            width: 50%;
+            height: 100%;
+          }
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// featured section 
+.featured-sec{
+  margin: 20px 0;
+  .flex-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    .featured-item{
+      flex: 0 0 auto;
+      width: 32.5%;
+      padding: 8px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #d3d3d3;
+      height: 250px;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+// categories-carousel
+.categories{
+  .title-bar{
+    // background-color: $hover-color;
+    // color: #fff;
+    &:hover a {
+      color: $hover-color;
+    }
+    .name{
+      @include title-text();
+    }
+    .link{
+      color:$primary-color;
+      font-weight: 600;
+    }
+  }
+
+}
+.categories-carousel{
+
+
+  .itspopular,  .itsstockout, .itsnew{
+    overflow: hidden;
+    position: relative;
+      &::after{
+        font-size: $secondary-font;
+        position: absolute;
+        top: 18px;
+        right: -33px;
+        rotate: 45deg;
+        width: 54%;
+        text-align: center;
+        padding-bottom: 5px;
+        font-weight: 600;
+        letter-spacing: rem(0.9px);
+        text-transform: capitalize;
+        font-size: rem(15px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+  }
+  .itspopular::after{
+    content: "Popular";
+    background-color: #9606BF;
+    color: #fff;
+  }
+  .itsstockout::after{
+    content: "Stock Out";
+    background-color: #7d7d7e;
+    color: #fff;
+  }
+  .itsnew::after{
+    content: "New";
+    background-color: #36BF08;
+    color: #f1f1f1;
+  }
+  
+  .card{
+   
+    width: 15rem;
+   
+
+    &:hover{
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+ 
+    
+    .card-img{
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      .discount{
+        position:absolute;
+        z-index: 1;
+        background-color: $hover-color;
+        color:#fff;
+        top:0;
+        left: 0;
+        border-radius: 3px;
+        padding: 2px 7px;
+        font-weight: 500;
+        font-size: rem(12px);
+        font-family: $primary-font;
+      }
+      img{
+        transition: all 0.5s;
+        &:hover{
+          transition: all 0.5s;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .card-body{
+      
+      .ratingorsold{
+        position: relative;
+        z-index: 1;
+        // margin-top: rem(-8px);
+        background-color: $primary-color;
+        @include padding-left-right();
+        padding-bottom: rem(5px);
+        padding-top: rem(5px);
+
+        .rating{
+          color: #ffd000;
+          font-weight: 500;
+        }
+        .sold{
+          @include title-text($size:16px);
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+      .card-title{
+       
+        @include title-text($size:14px);
+        padding: 5px 8px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+      }
+      .price{
+        padding: 5px 0;
+        display: flex;
+        justify-content: center;
+        gap: rem(15px);
+        small{
+          font-size: rem(11px);
+        }
+        .offer-price{
+          font-size: rem(16px);
+          color: $hover-color;
+          font-weight: 600;
+        }
+        .regular-price{
+          color: $lighter-color;
+          font-weight: 600;
+        }
+      }
+      .card-btns{
+        @include padding-left-right(5px,5px);
+        a.btn{
+          font-size: rem(12px);
+          &:focus-visible, &:focus{
+            box-shadow: none;
+            outline: none;
+            border: none;
+          }
+        }
+        a.btn.btn-primary{
+          font-family: "Siyam Rupali", arial,$primary-font, sans-serif;
+          font-weight: 500;
+          font-size: rem(12px);
+          background-color: $hover-color;
+          color: #fff;
+          border-color: #a41733;
+          &:hover{
+            border-color: #c02f53;
+            background-color: #c02f53;
+          }
+        }
+      }
+    }
+  }
+}
