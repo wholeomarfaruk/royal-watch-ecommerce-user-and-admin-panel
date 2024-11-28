@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:Arial, Helvetica ;
+    background: #f4f6f8;
+}
+.container-main{
+    margin: auto;
+    margin-top: 3rem;
+    width: 610px;
+    text-align: center;
+    padding:15px;
+    box-shadow: rgba(126, 126, 126, 0.35) 0px 5px 20px;
+    border-radius: 10px;
+    background:white;
+}
+.check-icon{
+    font-size: 50px;
+    padding: 10px 13px;
+    border-radius: 50%;
+    background: #6cf8c540;
+}
+.recevied-text{
+    margin-top: 10px;
+    color: #0eaa0e;
+}
+.text{
+    color: #666;
+    margin-top: 25px;
+}
+.home, .truck{
+    margin-right: 5px;
+}
+.btn-home{
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background: #000;
+    border: 0;
+    border-radius: 10px;
+}
+.btn-truck{
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background: #bf092d;
+    border: 0;
+    border-radius: 10px;
+}
+.btn-truck a{
+    text-decoration: none;
+    color: #fff;
+}
+.btn-truck:hover{
+     background: #a41733;
+     color: #fff;
+}
+.btn-home:hover{
+    background: #232323;
+    color: #fff;
+}
+
+/* truck order page */
+.truck-order-div{
+    width: 610px;
+    margin-top: 25px;
+    border-radius: 15px;
+    margin: auto;
+    padding: 15px;
+    background: #998c8c29;
+    box-shadow: rgba(126, 126, 126, 0.35) 0px 5px 20px;
+}
+.btn-truck-order{
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background: #bf092d;
+    border: 0;
+    border-radius: 10px;
+}
+.btn-truck-order:hover{
+     background: #a41733;
+     color: #fff;
+}

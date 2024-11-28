@@ -40,7 +40,7 @@ body {
 /* CONTACT US */
 
 .child {
-    background-image: url('../images/contact-bg.jpg');
+    background-image: url('../../assets/images/contact-bg.jpg');
     height: 250px;
     width: 100%;
     background-size: cover;
@@ -185,4 +185,137 @@ body {
     [class="contact"] {
         width: 100%;
     }
+}
+
+/* ABOUT US */
+
+.about-1{
+        background-image: url('../../assets/images/contact-bg.jpg');
+        height: 250px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+        align-items: center;
+}
+.about-1 h2{
+    color: #fff;
+    font-weight: bold;
+    padding-top: 30px;
+}
+.about-1 p{
+    width: 50%;
+    padding: 4px;
+    color: #d6d4d4;
+}
+@media screen and (max-width: 768px){
+    .about-1 p{
+    width: 100%;}
+}
+.about-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 80px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .6);
+}
+.about-item i{
+    font-size: 25px;
+    margin: 0;
+}
+.about-item hr{
+    width: 45px;
+    height: 3px;
+    background-color: #5ffbf9;
+    margin: 0 auto;
+    border: none;
+}
+.about-item:hover{
+    background-color: #a31733;
+}
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p{
+    color: #fff;
+}
+.about-item:hover hr{
+    background-color: #fff;
+}
+.about-item:hover i{
+    transform: translateY(-20px);
+}
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover hr{
+    transition: all 400ms ease-in-out;
+}
+
+
+/* Privacy Police */
+
+.privacy-bg {
+    background-image: url('../../assets/images/privacy_policy_banner_-_sedco.png');
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.pri-text{
+        font-size: 50px;
+        padding-top: 80px;
+        color: #fff;
+    }
+.secound-privacy {
+    width: 70%;
+    box-shadow: 0 0 13px rgb(196, 190, 190);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+/* RETURN AND REFUND */
+.return-child{
+background-image: url('../../assets/images/Privacy+&+policy+Banner+image.webp');
+height: 250px;
+width: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.re-text{
+    font-size: 50px;
+    padding-top: 80px;
+    color: #fff;
+}
+.secound-return {
+    width: 90%;
+    box-shadow: 0 0 13px rgb(196, 190, 190);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+/* DELIVERY INFORMATION */
+
+.delivery-child{
+    background-image: url('../../assets/images/delivery.jpg');
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.secound-delivery {
+        width: 70%;
+        box-shadow: 0 0 13px rgb(196, 190, 190);
+        padding: 20px;
+        border-radius: 8px;
+        margin: 0 auto;
+}
+.delivery-text{
+    font-size: 50px;
+    padding-top: 80px;
+    color: #000000;
 }

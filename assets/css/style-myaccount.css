@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #edf2f5;
+}
+.account-div, .info-div{
+    background: #fff;
+}
+#nav-link-a:hover{
+    color: #a41733;
+}
+.info-div li a{
+    color:black;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+}
+.icon-box{
+    border: 1px solid #eee;
+    padding: 40px 40px;
+    transition: all 0.4s;
+}
+.icon-box:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    transform: scale(1.1ms);
+}
+.icon-box-icon i{
+    color:#a41733;
+}
+.icon-box-icon i:hover{
+    color:#0080ff;
+}
+.icon-box-content:hover{
+     color: #a41733;
+}
+/* delivery info */
+.box{
+    box-shadow: #99989859 0px 5px 15px;
+   border-radius: 15px;
+}
+.tab-content{
+    margin: auto;
+    display: block;
+}
+th td{
+    color:#999;
+    padding: 10px;
+}
