@@ -15,10 +15,8 @@
     <link href="lib/owlcarousel/owl.theme.default.min.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
-
     <!-- my style  -->
     <link rel="stylesheet" href="assets/css/style.css">
-
     <title>Royal Watch</title>
 </head>
 
@@ -38,16 +36,15 @@
             <div class="wrapper">
                 <div class="row">
                     <div class="mh-l">
-                        <div class="container-fluid">
-                            <a class="navbar-brand" href="index.html">
+                        
+                            <a class="logo" href="index.html">
                                 <img src="assets/images/logo.png" alt="" class="d-inline-block align-text-top">
 
                             </a>
-                        </div>
-
+                       
                     </div>
                     <div class="mh-m">
-                        <div class="container-fluid">
+                        <div class="searchbar">
                             <form class="d-flex">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit"><i
@@ -88,7 +85,7 @@
                                     </a>
                                 </li>
                                 <li class="list-item">
-                                    <a href="cart.html" class="link text-center">
+                                    <a href="cart.html" class="link text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" role="button">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                         <p class="fw-lighter">Cart</p>
                                     </a>
@@ -146,6 +143,18 @@
         <!-- mobile search area start -->
         <div class="mobile-search"></div>
         <!-- mobile search area end -->
+
+        <!-- shopping cart offcanvas start -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasRightLabel">Shopping Cart</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              ...
+            </div>
+          </div>
+        <!-- shopping cart offcanvas end -->
 
     </header>
     <!-- Header area end -->
@@ -223,7 +232,7 @@
                     <div id="owl-demo" class="cat-carousel owl-carousel owl-theme">
 
                         <div class="item">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" >
                                 <a href="#">
                                     <img src="storage/images/product/product-1.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -234,7 +243,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" >
                                 <a href="#">
                                     <img src="storage/images/product/product-5.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -245,7 +254,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" >
                                 <a href="#">
                                     <img src="storage/images/product/product-2.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -256,7 +265,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" >
                                 <a href="#">
                                     <img src="storage/images/product/product-1.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -267,7 +276,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" >
                                 <a href="#">
                                     <img src="storage/images/product/product-8.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -278,7 +287,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="card " style="width: 15rem;">
+                            <div class="card " >
                                 <a href="#">
                                     <img src="storage/images/product/product-7.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -289,7 +298,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" >
                                 <a href="#">
                                     <img src="storage/images/product/product-6.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -300,7 +309,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" >
                                 <a href="#">
                                     <img src="storage/images/product/product-11.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -311,7 +320,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" >
                                 <a href="#">
                                     <img src="storage/images/product/product-10.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -322,7 +331,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" >
                                 <a href="#">
                                     <img src="storage/images/product/product-12.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -333,7 +342,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" >
                                 <a href="#">
                                     <img src="storage/images/product/product-13.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -344,7 +353,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" >
                                 <a href="#">
                                     <img src="storage/images/product/product-14.jpg" class="card-img-top p-2" alt="...">
                                     <div class="card-body p-0">
@@ -702,7 +711,7 @@
         $(".cat-carousel").owlCarousel({
             autoplay: true,
             slideSpeed: 200,
-           
+            margin: 10, // Default margin between items
             loop: true,
             dots: false,
             responsive : {
