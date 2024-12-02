@@ -13,6 +13,7 @@
 
 //Example of use 
 // padding-left-right(15px,15px);
+
 $breakpoint:(
     'max-xs':'max-width:320px',
     'max-sm':'max-width:480px',
@@ -27,23 +28,35 @@ $breakpoint:(
     'min-xl': 'min-width:1140px', 
     'min-xxl': 'min-width:1440px', 
 );
-@mixin breakpoint($screan-size){
-    $map:map-get($breakpoint,$screan-size);
-    @if $map{
-        @media(#{$map}){
-            @content
+@mixin breakpoint($screan-size) {
+    $map: map-get($breakpoint, $screan-size);
+    
+    // Check if $screan-size exists in the $breakpoint map
+    @if $map {
+        @media (#{$map}) {
+            @content;
         }
-    }@else{
-        @error "opps seems like breakpoint #{$map} isn't defined";
+    }
+    // If not in the map, check if it's a valid custom media query
+    @else if str-index($screan-size, 'max-width:') or str-index($screan-size, 'min-width:') {
+        @media (#{$screan-size}) {
+            @content;
+        }
+    }
+    // Throw an error if it's neither
+    @else {
+        @error "Oops! The breakpoint `#{$screan-size}` isn't defined or valid.";
     }
 }
+
+
 // Example of use 
 // @include breakpoint(max-md){
 //    do something
 //    padding: 20px 10px;
 // }
 @function rem($pixels) {
-    @return $pixels / 16px * 1rem;
+    @return calc($pixels / 16px) * 1rem;
   }
 //   Example of use
 // body {

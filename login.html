@@ -18,7 +18,7 @@
 
     <!-- my style  -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style2.css">
+
 
     <title>Royal Watch</title>
 </head>
@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="mh-l">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="{{route('home.index')}}">
                                 <img src="assets/images/logo.png" alt="" class="d-inline-block align-text-top">
 
                             </a>
@@ -155,41 +155,42 @@
         <div class="wrapper">
 
             <!-- content start -->
-    <div class="container-fluid">
-        <div class="title text-center my-4">
-            <h2 class="text-dark fw-bold">Login to your account</h2>
-        </div>
-    </div>
-    <section class="box mx-auto my-5">
-        <form class="p-3"> 
-        <div class="row mb-3">
-                <div class="col-12">
-                    <label for="number" class="form-label">Mobile No*</label>
-                    <input type="number" class="form-control lh-lg" id="inputNumber" placeholder="11 Digit Mobile No">
+            <div class="container-fluid">
+                <div class="title text-center my-4">
+                    <h2 class="text-dark fw-bold">Login to your account</h2>
                 </div>
-        </div>   
-        <div class="row mb-3">
-                <div class="col-12-md-7">
-                    <label for="inputPassword4" class="form-label">Password*</label>
-                    <input type="password" class="form-control lh-lg" id="Password" placeholder="Password">
-                </div>
-        </div>
-            
-        <div class="row mb-3">
-                <div class="d-grid"> 
-                    <button class="btn btnreg" type="button">Login</button>
-                </div>
-        </div>     
-        <div class="row">
-                <div class="col-12">
-                    <a href="registration.html" type="button" class="btnlog">Create an account.</a>
+            </div>
+            <section class="inputform box mx-auto my-5">
+                <form class="p-3">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <label for="number" class="form-label">Mobile No*</label>
+                            <input type="number" class="form-control lh-lg" id="inputNumber"
+                                placeholder="11 Digit Mobile No">
+                        </div>
                     </div>
-        </div>
-        
-        </form>
-    </section>
+                    <div class="row mb-3">
+                        <div class="col-12-md-7">
+                            <label for="inputPassword4" class="form-label">Password*</label>
+                            <input type="password" class="form-control lh-lg" id="Password" placeholder="Password">
+                        </div>
+                    </div>
 
-            
+                    <div class="row mb-3">
+                        <div class="d-grid">
+                            <button class="btn btnreg" type="button">Login</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="registration.html" type="button" class="btnlog">Create an account.</a>
+                        </div>
+                    </div>
+
+                </form>
+            </section>
+
+
             <!-- content end -->
 
         </div>
